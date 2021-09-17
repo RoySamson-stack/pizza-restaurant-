@@ -13,11 +13,12 @@
   height: 100vh;
 }
 form{
-  display: none;
+  /* display: none; */
   position: absolute;
   margin: 20px;
   background-color: white;
-  padding: 20px;
+  padding: 50px;
+  border-radius: 25px;
 }
 .btn{
   margin-bottom: 10px;
