@@ -1,12 +1,19 @@
-body{
+*{
+  margin: 0px;
+  /* overflow: hidden; */
+}
+.landing_section{
+  /* make the backgroudn a slide show if possbile */
   background-image: url(img/pizza-back2.jpg);
   background-repeat: no-repeat;
   /* background-position: center center; */
   background-attachment: none;
   background-size: auto;
   position: relative;
+  height: 100vh;
 }
 form{
+  display: none;
   position: absolute;
   margin: 20px;
   background-color: white;
@@ -19,10 +26,22 @@ form{
   font-size: 8rem;
   text-align: center;
 }.navbar{
+  align-items:left;
+  font-weight: bold;
   padding: 15px;
-  margin-top: 60px;
   background-color: red;
   text-align: center;
+}.about{
+  padding-top: 20px;
+  background-color: black;
+  height: 20%;
+  color: white;
 }#pizza_amnt{
+  margin-top: 5px;
+  margin-bottom: 5px;
   width: 30px;
+}#header_2{
+  font-size: 40px
+}.more{
+ text-align: center
 }

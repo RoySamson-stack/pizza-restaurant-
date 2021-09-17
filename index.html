@@ -12,12 +12,17 @@
 </head>
 
 <body>
-  <nav class="navbar">
-    <ul>
-      <li>Menu</li>
-    </ul>
-  </nav>
+  <div class="landing_section">
+  <!-- <nav class="navbar">
+    make the menu form appear on toggle 
+      <p>Menu</p>
+      <p onclick="" href="#about_page">About</p>
+  </nav> -->
   <h2 class="page-header">We have the best pizza in the country.</h2>
+  <div class="more">
+  <h3 class="page-header" id="header_2">Try out some pizza</h3>
+  <input type="submit" value="ORDER" class="btn btn-success" id="order_btn">
+  </div>
   <form class="">
     <div class="">
       <h3>Pizza size</h3>
@@ -47,14 +52,40 @@
       </select>
     </div>
     <div class="">
-      <input type="text" id="pizza_amnt" placeholder="Enter the number of pizza">
+      <label>Amount</label>
+      <input type="text" id="pizza_amnt" placeholder="">
     </div>
     <button class="btn btn-primary">Place order</button>
     <div class="">
       <input type="radio" value="">Deliver</option>
       <input type="radio" value="">Dont deliver</option>
     </div>
+    <button class="btn btn-primary">Finish order</button>
   </form>
+  </div>
+  <div class="about" id="about_page">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h4>Amazing food</h4>
+          <p>Promotion</p>
+          <p>Menu</p>
+          <p>Ways to order</p>
+        </div>
+        <div class="col">
+          <h4>Amazing story</h4>
+          <p>our story</p>
+          <p>History</p>
+          <p>footprint</p>
+        </div>
+        <div class="col">
+          <h4>Lets talk</h4>
+          <p>customer care</p>
+          <p>Franchising</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="index.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </body>
