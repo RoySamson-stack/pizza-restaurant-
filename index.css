@@ -23,4 +23,6 @@ form{
   margin-top: 60px;
   background-color: red;
   text-align: center;
+}#pizza_amnt{
+  width: 30px;
 }
