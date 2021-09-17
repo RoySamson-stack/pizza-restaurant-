@@ -13,7 +13,7 @@
   height: 100vh;
 }
 form{
-  /* display: none; */
+  display: none;
   position: absolute;
   margin: 20px;
   background-color: white;
@@ -37,6 +37,7 @@ form{
   background-color: black;
   height: 20%;
   color: white;
+  position: ;
 }#pizza_amnt{
   margin-top: 5px;
   margin-bottom: 5px;
