@@ -1,6 +1,17 @@
 body{
+  background-image: url(img/pizza-back1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: none;
+  background-size: auto;
+  position: relative;
+}
+
+form{
+  position: absolute;
   margin: 20px;
-  
+  background-color: white;
+  padding: 20px;
 }
 .btn{
   margin-bottom: 10px;
