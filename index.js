@@ -1,16 +1,19 @@
-
-$(document).ready(function(){
-  $("#order_btn").click(function(){
+$(document).ready(function () {
+  $("#order_btn").click(function () {
     $("#order_form").toggle();
   });
-  $("#place_order").click(function(){
+  $("#place_order").click(function () {
     $("#delivery_form").toggle();
+    e.preventDefault();
+
   });
-  $("#cancel_btn").click(function(){
+  $("#cancel_btn").click(function () {
     $("#delivery_form").hide();
+    e.preventDefault();
   })
 });
-function pizza(size, top, crust){
+
+function pizza(size, top, crust) {
   this.size = size;
   this.top = top;
   this.crust = crust;
@@ -25,17 +28,17 @@ size.addEventListener(`change`, (e) => {
   const select = e.target;
   const value = select.value;
   const desc = select.selectedOptions[0].text;
-  console.log( desc);
+  console.log(desc);
 });
 crust.addEventListener(`change`, (e) => {
   const select = e.target;
   const value = select.value;
   const desc = select.selectedOptions[0].text;
-  console.log( desc);
+  console.log(desc);
 });
 toppings.addEventListener(`change`, (e) => {
   const select = e.target;
   const value = select.value;
   const desc = select.selectedOptions[0].text;
-  console.log( desc);
+  console.log(desc);
 });

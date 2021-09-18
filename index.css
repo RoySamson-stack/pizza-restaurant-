@@ -1,8 +1,9 @@
-*{
+* {
   margin: 0px;
   /* overflow: hidden; */
 }
-.landing_section{
+
+.landing_section {
   /* make the backgroudn a slide show if possbile */
   background-image: url(img/pizza-back2.jpg);
   background-repeat: no-repeat;
@@ -12,7 +13,8 @@
   position: relative;
   height: 100vh;
 }
-#order_form{
+
+#order_form {
   display: none;
   position: absolute;
   margin: 20px;
@@ -20,39 +22,59 @@
   padding: 50px;
   border-radius: 25px;
 }
-.btn{
+
+.btn {
   margin-bottom: 10px;
-}.page-header{
+}
+
+.page-header {
   color: white;
   font-size: 8rem;
   text-align: center;
-}.navbar{
-  align-items:left;
+}
+
+.navbar {
+  align-items: left;
   font-weight: bold;
   padding: 15px;
   background-color: red;
   text-align: center;
-}.about{
+}
+
+.about {
   padding-top: 20px;
   background-color: black;
   height: 20%;
   color: white;
-}.about p{
+}
+
+.about p {
   cursor: pointer;
-}#pizza_amnt{
+}
+
+#pizza_amnt {
   margin-top: 5px;
   margin-bottom: 5px;
   width: 30px;
-}#header_2{
+}
+
+#header_2 {
   font-size: 40px
-}.more{
- text-align: center
-}#delivery_form{
-display: none;
+}
+
+.more {
+  text-align: center
+}
+
+#delivery_form {
+  display: none;
   position: absolute;
   background-color: white;
   padding: 30px;
   border-radius: 25px;
-}#delivery_form input{
+  margin-left: 300px
+}
+
+#delivery_form input {
   margin-top: 7px;
 }
