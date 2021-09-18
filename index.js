@@ -2,6 +2,12 @@
 $(document).ready(function(){
   $("#order_btn").click(function(){
     $("#order_form").toggle();
+  });
+  $("#place_order").click(function(){
+    $("#delivery_form").toggle();
+  });
+  $("#cancel_btn").click(function(){
+    $("#delivery_form").hide();
   })
 });
 function pizza(size, top, crust){
