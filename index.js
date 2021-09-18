@@ -4,20 +4,27 @@ $(document).ready(function () {
   });
   $("#place_order").click(function () {
     $("#delivery_form").toggle();
-    e.preventDefault();
 
   });
   $("#cancel_btn").click(function () {
     $("#delivery_form").hide();
-    e.preventDefault();
   })
 });
 
-function pizza(size, top, crust) {
-  this.size = size;
-  this.top = top;
-  this.crust = crust;
+function pizza(sizes, top, crust) {
+  this.sizes= [];
+  this.top = [];
+  this.crust = [];
 }
+function sizes(size, price){
+  this.size = size;
+  this.price = price;
+}
+function top(toppings, price){
+this.toppings = toppings;
+this.price = price
+}
+
 const size = document.querySelector(`[id="size"]`);
 const crust = document.querySelector(`[id="crust"]`);
 const toppings = document.querySelector(`[id="toppings"]`);
