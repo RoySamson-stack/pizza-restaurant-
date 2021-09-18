@@ -12,7 +12,7 @@
   position: relative;
   height: 100vh;
 }
-form{
+#order_form{
   display: none;
   position: absolute;
   margin: 20px;
@@ -37,7 +37,8 @@ form{
   background-color: black;
   height: 20%;
   color: white;
-  position: ;
+}.about p{
+  cursor: pointer;
 }#pizza_amnt{
   margin-top: 5px;
   margin-bottom: 5px;
@@ -46,4 +47,12 @@ form{
   font-size: 40px
 }.more{
  text-align: center
+}#delivery_form{
+display: none;
+  position: absolute;
+  background-color: white;
+  padding: 30px;
+  border-radius: 25px;
+}#delivery_form input{
+  margin-top: 7px;
 }

@@ -13,57 +13,64 @@
 
 <body>
   <div class="landing_section">
-  <!-- <nav class="navbar">
+    <!-- <nav class="navbar">
     make the menu form appear on toggle 
       <p>Menu</p>
       <p onclick="" href="#about_page">About</p>
   </nav> -->
-  <h2 class="page-header">We have the best pizza in the country.</h2>
-  <div class="more">
-  <h3 class="page-header" id="header_2">Try out some pizza</h3>
-  <input type="submit" value="ORDER" class="btn btn-success" id="order_btn">
-  </div>
-  <!-- make this form toggle of press of the order button -->
-  <!--  -->
-  <form class="" id="order_form">
-    <div class="">
-      <h3>Pizza size</h3>
-      <select class="custom-select" id="size">
-        <option value="">small</option>
-        <option value="">medium</option>
-        <option value="">large</option>
-        <option value="">extra large</option>
-      </select>
+    <h2 class="page-header">We have the best pizza in the country.</h2>
+    <div class="more">
+      <h3 class="page-header" id="header_2">Try out some pizza</h3>
+      <input type="submit" value="ORDER" class="btn btn-success" id="order_btn">
     </div>
-    <div class="">
-      <h3>Pizza crust</h3>
-      <select class="custom-select" id="crust">
-        <option value="">neapolitan</option>
-        <option value="">new york</option>
-        <option value="">sicilian</option>
-        <option value="">chicago-style deep dish</option>
-      </select>
+    <!-- make this form toggle of press of the order button -->
+    <!--  -->
+    <form class="" id="order_form">
+      <div class="">
+        <h3>Pizza size</h3>
+        <select class="custom-select" id="size">
+          <option value="">small</option>
+          <option value="">medium</option>
+          <option value="">large</option>
+          <option value="">extra large</option>
+        </select>
+      </div>
+      <div class="">
+        <h3>Pizza crust</h3>
+        <select class="custom-select" id="crust">
+          <option value="">crispy</option>
+          <option value="">stuffed</option>
+          <option value="">gluten free</option>
+          <option value="">chicago-style deep dish</option>
+        </select>
+      </div>
+      <div class="">
+        <h3>pizza toppings</h3>
+        <select class="custom-select" id="toppings">
+          <option value="">vegan</option>
+          <option value="">pepperoni</option>
+          <option value="">mushroom</option>
+          <option value="">pineapple</option>
+        </select>
+      </div>
+      <div class="">
+        <label>Amount</label>
+        <input type="text" id="pizza_amnt" placeholder="">
+      </div>
+      <button class="btn btn-primary"> Place order</button>
+    
+      <button class="btn btn-primary">Finish order</button>
+    </form>
+    <form class="" id="delivery_form">
+      <div class="">
+        <input type="radio" value="">Deliver</option>
+        <input type="radio" value="">Dont deliver</option>
+      </div>
+      <input type="text" placeholder="Enter delivery location"> 
+      <div>
+      <input type="submit" value="order" class="btn btn-primary">
     </div>
-    <div class="">
-      <h3>pizza toppings</h3>
-      <select class="custom-select" id="toppings">
-        <option value="">vegan</option>
-        <option value="">pepperoni</option>
-        <option value="">mushroom</option>
-        <option value="">pineapple</option>
-      </select>
-    </div>
-    <div class="">
-      <label>Amount</label>
-      <input type="text" id="pizza_amnt" placeholder="">
-    </div>
-    <button class="btn btn-primary"> Place order</button>
-    <div class="">
-      <input type="radio" value="">Deliver</option>
-      <input type="radio" value="">Dont deliver</option>
-    </div>
-    <button class="btn btn-primary">Finish order</button>
-  </form>
+    </form>
   </div>
   <div class="about" id="about_page">
     <div class="container">

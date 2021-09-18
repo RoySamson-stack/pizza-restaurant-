@@ -4,7 +4,11 @@ $(document).ready(function(){
     $("#order_form").toggle();
   })
 });
-
+function pizza(size, top, crust){
+  this.size = size;
+  this.top = top;
+  this.crust = crust;
+}
 const size = document.querySelector(`[id="size"]`);
 const crust = document.querySelector(`[id="crust"]`);
 const toppings = document.querySelector(`[id="toppings"]`);
