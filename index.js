@@ -73,7 +73,39 @@ $(document).ready(function () {
       "</form>"
     )
   });
+  $("#order_form").submit(function (event) {
+    event.preventDefault();
+    debugger;
+
+    var size = document.querySelector(`[id="size"]`);
+    var crust = document.querySelector(`[id="crust"]`);
+    var toppings = document.querySelector(`[id="toppings"]`);
+    var amount = document.getElementById('pizza_amnt').val();
+
+    size.addEventListener(`change`, (e) => {
+      const select = e.target;
+      const value = select.value;
+      const desc = select.selectedOptions[0].text;
+      console.log(desc);
+    });
+    crust.addEventListener(`change`, (e) => {
+      const select = e.target;
+      const value = select.value;
+      const desc = select.selectedOptions[0].text;
+      console.log(desc);
+    });
+    toppings.addEventListener(`change`, (e) => {
+      const select = e.target;
+      const value = select.value;
+      const desc = select.selectedOptions[0].text;
+      console.log(desc);
+    });
+    var newOrder = new Order(size, crust, amount, toppings);
   
+  })
+  $("full_order").append("<li><span class=''>" + newOrder.size() + "</span></li>");
+  $("contact").last().click(function(){
+    $("").show();
 })
 
 function reset() {
