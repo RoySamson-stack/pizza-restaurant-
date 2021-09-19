@@ -29,6 +29,9 @@ $(document).ready(function () {
   $("#order_btn").click(function () {
     $("#order_form").show();
   });
+  $("#cancel_order").click(function () {
+    $("#order_form").hide();
+  })
   //  $("#place_order").click(function () {
   //    $("#delivery_form").toggle();
   // });
