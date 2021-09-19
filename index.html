@@ -30,36 +30,35 @@
       <div class="">
         <h3>Pizza size</h3>
         <select class="custom-select" id="size">
-          <option value="">small</option>
-          <option value="">medium</option>
-          <option value="">large</option>
-          <option value="">extra large</option>
+          <option value="">small -- 250</option>
+          <option value="">medium -- 500</option>
+          <option value="">large -- 1000</option>
+          <option value="">extra large --1250</option>
         </select>
       </div>
       <div class="">
         <h3>Pizza crust</h3>
         <select class="custom-select" id="crust">
           <option value="">crispy</option>
-          <option value="">stuffed</option>
-          <option value="">gluten free</option>
-          <option value="">chicago-style deep dish</option>
+          <option value="">stuffed </option>
+          <option value="">gluten free </option>
+          <option value="">chicago-style deep dish </option>
         </select>
       </div>
       <div class="">
         <h3>pizza toppings</h3>
         <select class="custom-select" id="toppings">
-          <option value="">vegan</option>
-          <option value="">pepperoni</option>
-          <option value="">mushroom</option>
-          <option value="">pineapple</option>
+          <option value="">vegan -- 220</option>
+          <option value="">pepperoni -- 150</option>
+          <option value="">mushroom -- 120</option>
+          <option value="">pineapple -- 80</option>
         </select>
       </div>
       <div class="">
         <label>Amount</label>
         <input type="text" id="pizza_amnt" placeholder="">
       </div>
-      <input type="submit" value="Place order" id="place_order" class="btn btn-primary">
-      <input type="submit" value="Cancel"class="bnt btn-danger" id="cancel_btn">
+      <input type="submit" value="Place order" id="place_order" onclick="calculation();" class="btn btn-primary">
         </form>
     <form class="" id="delivery_form">
       <div class="">
