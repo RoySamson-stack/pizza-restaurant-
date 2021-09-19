@@ -15,7 +15,7 @@
 }
 
 #order_form {
-  /* display: none; */
+  display: none;
   position: absolute;
   margin: 20px;
   background-color: white;
@@ -84,4 +84,7 @@
 }.locate_del input{
   margin-top: 5px;
   margin-bottom: 5px;
+}#show_order{
+  display: none;
+  color: white;
 }

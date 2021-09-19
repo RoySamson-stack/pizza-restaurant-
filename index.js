@@ -22,7 +22,7 @@ function Location(street, house, number) {
 }
 
 Location.prototype.fullAddress = function () {
-  return this.street + " " + this.house + " " + this.number + " ";
+  return this.street + " " + this.house;
 }
 
 $(document).ready(function () {
@@ -111,8 +111,11 @@ $(document).ready(function () {
   
   })
   $("full_order").append("<li><span class=''>" + newOrder.size() + "</span></li>");
-  $("contact").last().click(function(){
-    $("").show();
+  $("#place_order").last().click(function(){
+    $("#show_order").show();
+    $(".size").text(newOrder.size);
+    $(".toppings").text(newOrder.toppings);
+    $(".crust").text(newOrder.crust);
 })
 
 });
