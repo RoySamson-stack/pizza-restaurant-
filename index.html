@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css">
+
   <title>Pizza</title>
 </head>
 
@@ -57,18 +58,19 @@
         <label>Amount</label>
         <input type="text" id="pizza_amnt" placeholder="">
       </div>
-      <button id="place_order" class="btn btn-primary"> Place order</button>
-    </form>
+      <input type="submit" value="Place order" id="place_order" class="btn btn-primary">
+      <input type="submit" value="Cancel"class="bnt btn-danger" id="cancel_btn">
+        </form>
     <form class="" id="delivery_form">
       <div class="">
         <input type="radio" value="">Deliver</option>
         <input type="radio" value="">Dont deliver</option>
       </div>
-      <input type="text" placeholder="Enter delivery location">
+      <input type="text" placeholder="Enter delivery location"> 
       <div>
-        <input type="submit" value="order" class="btn btn-primary">
-        <input type="submit" id="cancel_btn" value="cancel" class="btn btn-danger">
-      </div>
+      <input type="submit" value="order" class="btn btn-primary">
+      <input type="submit" id="cancel_btn" value="cancel" class="btn btn-danger">
+    </div>
     </form>
   </div>
   <div class="about" id="about_page">
@@ -95,6 +97,7 @@
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script src="index.js"></script>
 </body>
 

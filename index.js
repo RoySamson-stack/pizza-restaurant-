@@ -1,29 +1,28 @@
 $(document).ready(function () {
   $("#order_btn").click(function () {
-    $("#order_form").toggle();
+    $("#order_form").show();
   });
-  $("#place_order").click(function () {
-    $("#delivery_form").toggle();
-
-  });
-  $("#cancel_btn").click(function () {
-    $("#delivery_form").hide();
-  })
+  // $("#place_order").click(function () {
+  //   $("#delivery_form").toggle();
+  // });
+  // $("#cancel_btn").click(function () {
+  //   $("#delivery_form").hide();
+  // })
 });
 
 function pizza(sizes, top, crust) {
   this.sizes= [];
   this.top = [];
-  this.crust = [];
+  this.crust = crust;
 }
 function sizes(size, price){
   this.size = size;
   this.price = price;
 }
-function top(toppings, price){
-this.toppings = toppings;
-this.price = price
-}
+// function top(toppings, price){
+// this.toppings = toppings;
+// this.price = price
+// }
 
 const size = document.querySelector(`[id="size"]`);
 const crust = document.querySelector(`[id="crust"]`);
@@ -49,3 +48,6 @@ toppings.addEventListener(`change`, (e) => {
   const desc = select.selectedOptions[0].text;
   console.log(desc);
 });
+function calculation(){
+  
+}
