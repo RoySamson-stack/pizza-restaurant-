@@ -35,6 +35,8 @@ $(document).ready(function () {
   // $("#cancel_btn").click(function () {
   //   $("#delivery_form").hide();
   // });
+
+  $
   $("#add_order").click(function () {
     $("#order_form").append(
       '<form class="" id="order_form">' +
@@ -107,4 +109,5 @@ $(document).ready(function () {
   $("contact").last().click(function(){
     $("").show();
 })
+
 });

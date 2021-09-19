@@ -58,13 +58,23 @@
         <label>Amount</label>
         <input type="text" id="pizza_amnt" placeholder="">
       </div>
+      <div class="" id="deliver_opt">
+      <input type="radio" id="deliver" value="Deliver"> Deliver
+      <input type="radio" id="nt_deliver" value="Dont deliver"> Dont deliver
+      <div class="locate_del">
+        <input type="text" class="form-control" placeholder="location">
+        <div>
+          <input type="text" class="form-control" placeholder="house number">
+        </div>
+      </div>
+      </div>
       <input type="submit" value="Place order" id="place_order" class="btn btn-primary">
       <input type="submit" value="Another order" id="add_order" class="btn btn-success">
     </form>
-    <form class="" id="delivery_form">
+    <!-- <form class="" id="delivery_form">
       <div class="">
-        <input type="radio" value="">Deliver</option>
-        <input type="radio" value="">Dont deliver</option>
+        <input type="radio" id="deliver" value="Deliver">
+        <input type="radio" id="nt_deliver" value="Dont deliver">
       </div>
       <div class="" id="deliver_input">
         <input type="text" placeholder="Enter delivery location">
@@ -75,7 +85,7 @@
         <input type="submit" value="order" class="btn btn-primary">
         <input type="submit" id="cancel_btn" value="cancel" class="btn btn-danger">
       </div>
-    </form>
+    </form> -->
     <div>
       <h2>Full order</h2>
       <ul id="full_order">

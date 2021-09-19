@@ -15,7 +15,7 @@
 }
 
 #order_form {
-  display: none;
+  /* display: none; */
   position: absolute;
   margin: 20px;
   background-color: white;
@@ -67,7 +67,7 @@
 }
 
 #delivery_form {
-  /* display: none; */
+  display: none;
   position: absolute;
   background-color: white;
   padding: 30px;
@@ -79,4 +79,9 @@
   margin-top: 7px;
 }#deliver_input{
   display: block
+}.locate_del{
+  display: none;
+}.locate_del input{
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
