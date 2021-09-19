@@ -67,7 +67,7 @@
 }
 
 #delivery_form {
-  display: none;
+  /* display: none; */
   position: absolute;
   background-color: white;
   padding: 30px;
@@ -77,4 +77,6 @@
 
 #delivery_form input {
   margin-top: 7px;
+}#deliver_input{
+  display: block
 }
