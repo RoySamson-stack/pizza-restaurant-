@@ -36,7 +36,12 @@ $(document).ready(function () {
   //   $("#delivery_form").hide();
   // });
 
-  $
+  $("#deliver").click(function(){
+    $(".locate_del").toggle();
+  });
+  $("#nt_deliver").click(function(){
+    $(".locate_del").hide();
+  })
   $("#add_order").click(function () {
     $("#order_form").append(
       '<form class="" id="order_form">' +
