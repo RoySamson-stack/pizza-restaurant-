@@ -2,6 +2,7 @@ function Order(sizes, top, crust) {
   this.sizes = sizes;
   this.top = top;
   this.crust = crust;
+  this.place = [];
 }
 // function Sizes(size, price){
 //   this.size = size;
@@ -39,10 +40,10 @@ $(document).ready(function () {
   //   $("#delivery_form").hide();
   // });
 
-  $("#deliver").click(function(){
+  $("#deliver").click(function () {
     $(".locate_del").toggle();
   });
-  $("#nt_deliver").click(function(){
+  $("#nt_deliver").click(function () {
     $(".locate_del").hide();
   });
   $("#add_order").on('click', '#order_form', function () {
@@ -83,45 +84,53 @@ $(document).ready(function () {
       "</form>"
     )
   });
-  $("#order_form").submit(function (event) {
- 
+  // var size = document.querySelector(`[id="size"]`);
+  // var crust = document.querySelector(`[id="crust"]`);
+  // var toppings = document.querySelector(`[id="toppings"]`);
+  // var amount = document.getElementById('pizza_amnt').value;
 
-    var size = document.querySelector(`[id="size"]`);
-    var crust = document.querySelector(`[id="crust"]`);
-    var toppings = document.querySelector(`[id="toppings"]`);
-    var amount = document.getElementById('pizza_amnt').value;
+  // size.addEventListener(`change`, (e) => {
+  //   const select = e.target;
+  //   const value = select.value;
+  //   const desc = select.selectedOptions[0].text;
+  //   console.log(desc);
+  // });
+  // crust.addEventListener(`change`, (e) => {
+  //   const select = e.target;
+  //   const value = select.value;
+  //   const desc = select.selectedOptions[0].text;
+  //   console.log(desc);
+  // });
+  // toppings.addEventListener(`change`, (e) => {
+  //   const select = e.target;
+  //   const value = select.value;
+  //   const desc = select.selectedOptions[0].text;
+  //   console.log(desc);
+  // });
+  $('order_form').submit(function (event) {
+    event.preventDefault();
+    var pizzaSize = $('size').val();
+    var pizzaCrust = $('crust').val();
+    var pizzaTop = $('toppings').val();
+    var inputAmount = $('amount').val();
 
-    size.addEventListener(`change`, (e) => {
-      const select = e.target;
-      const value = select.value;
-      const desc = select.selectedOptions[0].text;
-      console.log(desc);
-    });
-    crust.addEventListener(`change`, (e) => {
-      const select = e.target;
-      const value = select.value;
-      const desc = select.selectedOptions[0].text;
-      console.log(desc);
-    });
-    toppings.addEventListener(`change`, (e) => {
-      const select = e.target;
-      const value = select.value;
-      const desc = select.selectedOptions[0].text;
-      console.log(desc);
-    });
+    var newOrder = new Order(size, crust, toppings, amount);
+    $(".locate_del").each(function () {
+      var locate = $(this).find('#estate').val();
+      var house = $(this).find('#house_no').val();
 
-  
-  var newOrder = new Order(size, crust, amount, toppings);
-
-  $("#full_order").append("<li><span class=''>" + newOrder.fullOrder() + "</span></li>");
-  $("#place_order").last().click(function(){
-    $("#show_order").show();
-    $(".size").text(newOrder.size);
-    $(".toppings").text(newOrder.toppings);
-    $(".crust").text(newOrder.crust);
-
+      var newLocation = {
+        estate: locate,
+        house: house_no
+      };
+      newOrder.place.push(newLocation);
+    })
+    $("#full_order").append("<li><span class=''>" + newOrder.fullOrder() + "</span></li>");
+    $("#place_order").last().click(function () {
+      $("#show_order").show();
+      $(".size").text(newOrder.size);
+      $(".toppings").text(newOrder.toppings);
+      $(".crust").text(newOrder.crust);
+    })
   })
-
-})
-
 });
