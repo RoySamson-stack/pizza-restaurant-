@@ -2,7 +2,9 @@
   margin: 0px;
   /* overflow: hidden; */
 }
-
+body{
+  height: 100vh;
+}
 .landing_section {
   /* make the backgroudn a slide show if possbile */
   background-image: url(img/pizza-back2.jpg);
@@ -92,6 +94,8 @@
 }#show_order{
   display: none;
   /* color: white; */
+  z-index: 100;
+  position: absolute;
   margin-left: 500px;
   background-color: white;
   border-radius: 25px;
@@ -100,10 +104,11 @@
 }#show_order h2{
   padding: 20px;
 }#menu{
-  z-index: 100;
+  position:fixed;
+  z-index: 10;
   display: none;
   background-color: white;
-  width: 300px;
+  width: 600px;
   text-align: center;
   border-radius: 25px;
 }.top{
