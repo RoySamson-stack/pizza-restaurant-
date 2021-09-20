@@ -90,6 +90,7 @@
 }#show_order{
   display: none;
   /* color: white; */
+  margin-left: 500px;
   background-color: white;
   border-radius: 25px;
   width: 200px;
