@@ -97,4 +97,13 @@
   height: auto;
 }#show_order h2{
   padding: 20px;
+}#menu{
+  background-color: white;
+  width: 600px;
+  text-align: center;
+  border-radius: 25px;
+  margin-left: 50%;
+  position: absolute;
+}.top{
+  text-align: right;
 }

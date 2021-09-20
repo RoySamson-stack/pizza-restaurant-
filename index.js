@@ -91,7 +91,7 @@ $(document).ready(function () {
   // var toppings = document.querySelector(`[id="toppings"]`);
   // var amount = document.getElementById('pizza_amnt').value;
 
-  
+
   $('#order_form').submit(function (event) {
     event.preventDefault();
     var pizzaSize = $('#size').val();
@@ -138,6 +138,12 @@ $(document).ready(function () {
       $("#toppings").text(newOrder.toppings);
       $("#crust").text(newOrder.crust);
       $("#amount").text(newOrder.amount);
+
+      $("#location").text(newLocation);
+      newOrder.place.forEach(function (location) {
+        $("#location").append("<li>" + location.estate + " " + location.house);
+      })
+
     })
   })
 });

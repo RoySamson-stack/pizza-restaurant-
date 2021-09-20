@@ -19,6 +19,7 @@
       <p>Menu</p>
       <p onclick="" href="#about_page">About</p>
   </nav> -->
+  <div class="top">
     <h2 class="page-header">Best Pizza in town.</h2>
     <div class="more">
       <h3 class="page-header" id="header_2">Try out some pizza</h3>
@@ -26,7 +27,37 @@
     </div>
     <!-- make this form toggle of press of the order button -->
     <!--  -->
-    <form class="" id="order_form">
+    <form class="form-group" id="menu">
+      <div>
+        <h2>Pizza sizes</h2>
+        <ul>
+          <li>small -- 250</li>
+          <li>medium -- 500</li>
+          <li>large -- 1000</li>
+          <li>extra large --1250</li>
+          </ul>
+      </div>
+      <div>
+        <h2>Pizza crust</h2>
+        <ul>
+          <li>crispy</li>
+          <li>stuffed</li>
+          <li>glutten free</li>
+          <li>extra large --1250</li>
+          </ul>
+      </div>
+      <div>
+        <h2>Pizza toppings</h2>
+        <ul>
+          <li>vegan -- 220</li>
+          <li>pepparoni -- 150</li>
+          <li>mushroom -- 120</li>
+          <li>pineapple -- 80</li>
+          </ul>
+      </div>
+    </form>
+  </div>
+    <form class="form-group" id="order_form">
       <div class="">
         <h3>Pizza size</h3>
         <input type="text" id="size" class="form-control" placeholder="Enter pizza size">
@@ -95,6 +126,9 @@
     <div id="show_order">
       <h2>Full order</h2>
       <ul id="full_order">
+        
+      </ul>
+      <ul id="location">
       </ul>
     </div>
   </div>
