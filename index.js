@@ -1,4 +1,4 @@
-function Order(sizes, top, crust, amount, price ,place) {
+function Order(sizes, top, crust, amount, price, place) {
   this.sizes = sizes;
   this.top = top;
   this.crust = crust;
@@ -36,10 +36,10 @@ $(document).ready(function () {
     $("#order_form").hide();
     $("#show_order").hide();
   });
-  $("#menu_toggle").click(function(){
+  $("#menu_toggle").click(function () {
     $("#menu").toggle()
   });
-  $("#close").click(function(){
+  $("#close").click(function () {
     $("#menu").hide();
   })
   //  $("#place_order").click(function () {
@@ -105,7 +105,7 @@ $(document).ready(function () {
     var pizzaCrust = $('#crust').val();
     var pizzaTop = $('#toppings').val();
     var inputAmount = $('#pizza_amnt').val();
-
+    var price = " ";
     // size.addEventListener(`change`, (e) => {
     //   const select = e.target;
     //   const value = select.value;
@@ -124,9 +124,16 @@ $(document).ready(function () {
     //   const desc = select.selectedOptions[0].text;
     //   console.log(desc);
     // });
-    if((pizzaSize) == "medium"){
 
-    } 
+    if ((pizzaSize) == "small") {
+      price = 250;
+    } else if ((pizzaSize) == "medium") {
+      price = 500;
+    } else if ((pizzaSize) == "large") {
+      price = 1000;
+    } else if ((pizzaSize) == "extra large") {
+      price = 1250;
+    }
 
     var newOrder = new Order(pizzaSize, pizzaCrust, pizzaTop, inputAmount);
 
@@ -140,6 +147,7 @@ $(document).ready(function () {
       };
       newOrder.place.push(newLocation);
     })
+    console.log(price);
     $("#full_order").append(
       "<li><span class=''>" + newOrder.fullOrder() + "</span></li>");
     $("#place_order").click(function () {
@@ -153,7 +161,6 @@ $(document).ready(function () {
       newOrder.place.forEach(function (location) {
         $("#location").append("<li>" + location.estate + " " + location.house);
       })
-
     })
   })
 });
