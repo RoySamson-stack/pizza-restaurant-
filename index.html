@@ -13,63 +13,65 @@
 </head>
 
 <body>
-  
+
   <div class="landing_section">
     <!-- <nav class="navbar">
     make the menu form appear on toggle 
       <p>Menu</p>
       <p onclick="" href="#about_page">About</p>
   </nav> -->
-  <nav class="navbar">
-    <input type="submit" id="menu_toggle" class="btn btn-primary" value="Menu">
-    <form class="" id="menu">
-      <div class="container">
-        <div class=row>
-          <div class="col">
-        <h2>Size</h2>
-        <ul>
-          <li>small -- 250</li>
-          <li>medium -- 500</li>
-          <li>large -- 1000</li>
-          <li>extra large --1250</li>
-          </ul>
+    <nav class="navbar">
+      <input type="submit" id="menu_toggle" class="btn btn-primary" value="Menu">
+      <form class="" id="menu">
+        <div class="container">
+          <div class=row>
+            <div class="col">
+              <h2>Size</h2>
+              <ul>
+                <li>small -- 250</li>
+                <li>medium -- 500</li>
+                <li>large -- 1000</li>
+                <li>extra large --1250</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h2>Crust</h2>
+              <ul>
+                <li>crispy</li>
+                <li>stuffed</li>
+                <li>glutten free</li>
+                <li>extra large --1250</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h2>Toppings</h2>
+              <ul>
+                <li>vegan -- 220</li>
+                <li>pepparoni -- 150</li>
+                <li>mushroom -- 120</li>
+                <li>pineapple -- 80</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="" id="close">X</span>
+        </div>
+      </form>
+    </nav>
+    <div class="top">
+      <h2 class="page-header">Best Pizza in town.</h2>
+      <div class="more">
+        <h3 class="page-header" id="header_2">Try out some pizza</h3>
+        <input type="submit" value="ORDER" class="btn btn-success" id="order_btn">
       </div>
-      <div class="col">
-        <h2>Crust</h2>
-        <ul>
-          <li>crispy</li>
-          <li>stuffed</li>
-          <li>glutten free</li>
-          <li>extra large --1250</li>
-          </ul>
-      </div>
-      <div class="col">
-        <h2>Toppings</h2>
-        <ul>
-          <li>vegan -- 220</li>
-          <li>pepparoni -- 150</li>
-          <li>mushroom -- 120</li>
-          <li>pineapple -- 80</li>
-          </ul>
-      </div>
-      </div>
-      </div>
-    </form>
-  </nav>
-  <div class="top">
-    <h2 class="page-header">Best Pizza in town.</h2>
-    <div class="more">
-      <h3 class="page-header" id="header_2">Try out some pizza</h3>
-      <input type="submit" value="ORDER" class="btn btn-success" id="order_btn">
+      <!-- make this form toggle of press of the order button -->
+      <!--  -->
+
     </div>
-    <!-- make this form toggle of press of the order button -->
-    <!--  -->
-    
-  </div>
     <form class="form-group" id="order_form">
       <div class="">
         <h3>Pizza size</h3>
-      
         <input type="text" id="size" class="form-control" placeholder="Enter pizza size">
         <!-- <select class="custom-select" id="size">
           <option value="">small -- 250</option>
@@ -80,7 +82,7 @@
       </div>
       <div class="">
         <h3>Pizza crust</h3>
-       
+
         <input type="text" id="crust" class="form-control" placeholder="type of crust">
         <!-- <select class="custom-select" id="crust">
           <option value="">crispy</option>
@@ -91,8 +93,8 @@
       </div>
       <div class="">
         <h3>pizza toppings</h3>
-        
-        <input type="text"  id="toppings" class="form-control" placeholder="toppings">
+
+        <input type="text" id="toppings" class="form-control" placeholder="toppings">
         <!-- <select class="custom-select" id="toppings">
           <option value="">vegan -- 220</option>
           <option value="">pepperoni -- 150</option>
@@ -138,7 +140,7 @@
     <div id="show_order">
       <h2>Full order</h2>
       <ul id="full_order">
-        
+
       </ul>
       <ul id="location">
       </ul>

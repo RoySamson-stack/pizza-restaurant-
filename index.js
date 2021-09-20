@@ -38,6 +38,9 @@ $(document).ready(function () {
   });
   $("#menu_toggle").click(function(){
     $("#menu").toggle()
+  });
+  $("#close").click(function(){
+    $("#menu").hide();
   })
   //  $("#place_order").click(function () {
   //    $("#delivery_form").toggle();

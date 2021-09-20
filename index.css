@@ -36,10 +36,9 @@ body{
   color: white;
   font-size: 8rem;
   text-align: center;
-  padding-top: 100px
+  padding-top: 50px;
 }
 #header_2{
-  padding-top: 5px;
 }
 .navbar {
   align-items: left;
@@ -104,7 +103,6 @@ body{
 }#show_order h2{
   padding: 20px;
 }#menu{
-  position:fixed;
   z-index: 10;
   display: none;
   background-color: white;
@@ -113,6 +111,11 @@ body{
   border-radius: 25px;
 }.top{
   text-align: right;
+}#close{
+  padding: 5px;
+  background-color:blue;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 800px){
   body{
