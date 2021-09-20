@@ -11,7 +11,7 @@ function Order(sizes, top, crust) {
 // this.toppings = toppings;
 // this.price = price
 // }
-Order.prototype.fullPizza = function () {
+Order.prototype.fullOrder = function () {
   return this.sizes + " " + this.top + " " + this.crust;
 }
 
@@ -44,8 +44,8 @@ $(document).ready(function () {
   });
   $("#nt_deliver").click(function(){
     $(".locate_del").hide();
-  })
-  $("#add_order").click(function () {
+  });
+  $("#add_order").on('click', '#order_form', function () {
     $("#order_form").append(
       '<form class="" id="order_form">' +
       ' <div class="">' +
@@ -84,13 +84,12 @@ $(document).ready(function () {
     )
   });
   $("#order_form").submit(function (event) {
-    event.preventDefault();
-    debugger;
+ 
 
     var size = document.querySelector(`[id="size"]`);
     var crust = document.querySelector(`[id="crust"]`);
     var toppings = document.querySelector(`[id="toppings"]`);
-    var amount = document.getElementById('pizza_amnt').val();
+    var amount = document.getElementById('pizza_amnt').value;
 
     size.addEventListener(`change`, (e) => {
       const select = e.target;
@@ -110,15 +109,19 @@ $(document).ready(function () {
       const desc = select.selectedOptions[0].text;
       console.log(desc);
     });
-    var newOrder = new Order(size, crust, amount, toppings);
+
   
-  })
-  $("full_order").append("<li><span class=''>" + newOrder.size() + "</span></li>");
+  var newOrder = new Order(size, crust, amount, toppings);
+
+  $("#full_order").append("<li><span class=''>" + newOrder.fullOrder() + "</span></li>");
   $("#place_order").last().click(function(){
     $("#show_order").show();
     $(".size").text(newOrder.size);
     $(".toppings").text(newOrder.toppings);
     $(".crust").text(newOrder.crust);
+
+  })
+
 })
 
 });
