@@ -4,7 +4,7 @@ they want.
 
 #### Author: Roy Samson
 ## Description
-View live site:https://roysamson-stack.github.io
+View live site:https://roysamson-stack.github.io/pizza-restaurant-/
 
 
 This is a website  for a pizza restaurant where a user can order pizza which can be delivered.
