@@ -15,12 +15,15 @@
 }
 
 #order_form {
+  width: 500px;
   display: none;
   position: absolute;
   margin: 20px;
   background-color: white;
   padding: 50px;
   border-radius: 25px;
+  margin-bottom: 25px;
+  z-index: 100;
 }
 
 .btn {
@@ -39,12 +42,11 @@
 .navbar {
   align-items: left;
   font-weight: bold;
-  padding: 15px;
-  background-color: red;
   text-align: center;
 }
 
 .about {
+  position: relative;
   padding-top: 20px;
   background-color: black;
   height: 20%;
@@ -98,12 +100,17 @@
 }#show_order h2{
   padding: 20px;
 }#menu{
+  z-index: 100;
+  display: none;
   background-color: white;
-  width: 600px;
+  width: 300px;
   text-align: center;
   border-radius: 25px;
-  margin-left: 50%;
-  position: absolute;
 }.top{
   text-align: right;
+}
+@media screen and (max-width: 800px){
+  body{
+    width: 100%;
+  }
 }

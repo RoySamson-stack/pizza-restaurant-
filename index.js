@@ -1,8 +1,9 @@
-function Order(sizes, top, crust, amount) {
+function Order(sizes, top, crust, amount, price ,place) {
   this.sizes = sizes;
   this.top = top;
   this.crust = crust;
   this.amount = amount;
+  this.price = [];
   this.place = [];
 }
 // function Sizes(size, price){
@@ -14,7 +15,7 @@ function Order(sizes, top, crust, amount) {
 // this.price = price
 // }
 Order.prototype.fullOrder = function () {
-  return "Your order is " + this.sizes + " size pizza with  " + this.top + "  topping , " + this.crust + " crust " + this.amount;
+  return "Your order is " + this.sizes + " size pizza with  " + this.top + "  topping , " + this.crust + " crust and " + this.amount + " pizzas";
 }
 
 function Location(street, house, number) {
@@ -34,6 +35,9 @@ $(document).ready(function () {
   $("#cancel_order").click(function () {
     $("#order_form").hide();
     $("#show_order").hide();
+  });
+  $("#menu_toggle").click(function(){
+    $("#menu").toggle()
   })
   //  $("#place_order").click(function () {
   //    $("#delivery_form").toggle();
@@ -117,6 +121,9 @@ $(document).ready(function () {
     //   const desc = select.selectedOptions[0].text;
     //   console.log(desc);
     // });
+    if((pizzaSize) == "medium"){
+
+    } 
 
     var newOrder = new Order(pizzaSize, pizzaCrust, pizzaTop, inputAmount);
 
