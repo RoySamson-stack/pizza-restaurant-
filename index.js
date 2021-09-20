@@ -14,7 +14,7 @@ function Order(sizes, top, crust, amount) {
 // this.price = price
 // }
 Order.prototype.fullOrder = function () {
-  return "Your order is" + this.sizes + " " + this.top + " " + this.crust + " " + this.amount;
+  return "Your order is " + this.sizes + " size pizza with  " + this.top + "  topping , " + this.crust + " crust " + this.amount;
 }
 
 function Location(street, house, number) {
@@ -24,7 +24,7 @@ function Location(street, house, number) {
 }
 
 Location.prototype.fullAddress = function () {
-  return ("To be delivered to" + `${street} + " " + ${this.house}`);
+  return "To be delivered to " + this.street + " " + this.house;
 }
 
 $(document).ready(function () {
@@ -33,7 +33,7 @@ $(document).ready(function () {
   });
   $("#cancel_order").click(function () {
     $("#order_form").hide();
-    $("#show_order").hide
+    $("#show_order").hide();
   })
   //  $("#place_order").click(function () {
   //    $("#delivery_form").toggle();
@@ -97,28 +97,29 @@ $(document).ready(function () {
     var pizzaSize = $('#size').val();
     var pizzaCrust = $('#crust').val();
     var pizzaTop = $('#toppings').val();
-    var inputAmount = $('#amount').val();
+    var inputAmount = $('#pizza_amnt').val();
 
-    size.addEventListener(`change`, (e) => {
-      const select = e.target;
-      const value = select.value;
-      const desc = select.selectedOptions[0].text;
-      console.log(desc);
-    });
-    crust.addEventListener(`change`, (e) => {
-      const select = e.target;
-      const value = select.value;
-      const desc = select.selectedOptions[0].text;
-      console.log(desc);
-    });
-    toppings.addEventListener(`change`, (e) => {
-      const select = e.target;
-      const value = select.value;
-      const desc = select.selectedOptions[0].text;
-      console.log(desc);
-    });
+    // size.addEventListener(`change`, (e) => {
+    //   const select = e.target;
+    //   const value = select.value;
+    //   const desc = select.selectedOptions[0].text;
+    //   console.log(desc);
+    // });
+    // crust.addEventListener(`change`, (e) => {
+    //   const select = e.target;
+    //   const value = select.value;
+    //   const desc = select.selectedOptions[0].text;
+    //   console.log(desc);
+    // });
+    // toppings.addEventListener(`change`, (e) => {
+    //   const select = e.target;
+    //   const value = select.value;
+    //   const desc = select.selectedOptions[0].text;
+    //   console.log(desc);
+    // });
 
     var newOrder = new Order(pizzaSize, pizzaCrust, pizzaTop, inputAmount);
+
     $(".locate_del").each(function () {
       var locate = $(this).find('#estate').val();
       var house = $(this).find('#house_no').val();
@@ -136,6 +137,7 @@ $(document).ready(function () {
       $("#size").text(newOrder.size);
       $("#toppings").text(newOrder.toppings);
       $("#crust").text(newOrder.crust);
+      $("#amount").text(newOrder.amount);
     })
   })
 });
