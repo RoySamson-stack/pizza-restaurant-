@@ -1,7 +1,8 @@
-function Order(sizes, top, crust) {
+function Order(sizes, top, crust, amount) {
   this.sizes = sizes;
   this.top = top;
   this.crust = crust;
+  this.amount = amount;
   this.place = [];
 }
 // function Sizes(size, price){
@@ -13,7 +14,7 @@ function Order(sizes, top, crust) {
 // this.price = price
 // }
 Order.prototype.fullOrder = function () {
-  return this.sizes + " " + this.top + " " + this.crust;
+  return ("Your order is" + `${sizes} + " " + ${top} + " " + ${crust}`)
 }
 
 function Location(street, house, number) {
@@ -23,7 +24,7 @@ function Location(street, house, number) {
 }
 
 Location.prototype.fullAddress = function () {
-  return this.street + " " + this.house;
+  return ("To be delivered to" + `${street} + " " + ${this.house}`);
 }
 
 $(document).ready(function () {
@@ -46,7 +47,7 @@ $(document).ready(function () {
   $("#nt_deliver").click(function () {
     $(".locate_del").hide();
   });
-  $("#add_order").on('click', '#order_form', function () {
+  $("#add_order").click(function () {
     $("#order_form").append(
       '<form class="" id="order_form">' +
       ' <div class="">' +
@@ -114,19 +115,19 @@ $(document).ready(function () {
     var pizzaTop = $('toppings').val();
     var inputAmount = $('amount').val();
 
-    var newOrder = new Order(size, crust, toppings, amount);
+    var newOrder = new Order(pizzaSize, pizzaCrust, pizzaTop, inputAmount);
     $(".locate_del").each(function () {
       var locate = $(this).find('#estate').val();
       var house = $(this).find('#house_no').val();
 
       var newLocation = {
         estate: locate,
-        house: house_no
+        house: house
       };
       newOrder.place.push(newLocation);
     })
     $("#full_order").append("<li><span class=''>" + newOrder.fullOrder() + "</span></li>");
-    $("#place_order").last().click(function () {
+    $("#place_order").click(function () {
       $("#show_order").show();
       $(".size").text(newOrder.size);
       $(".toppings").text(newOrder.toppings);
