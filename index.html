@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,117 +7,71 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css">
-
   <title>Pizza</title>
 </head>
-
 <body>
-
   <div class="landing_section">
     <!-- <nav class="navbar">
     make the menu form appear on toggle 
       <p>Menu</p>
       <p onclick="" href="#about_page">About</p>
   </nav> -->
-    <nav class="navbar">
-      <input type="submit" id="menu_toggle" class="btn btn-primary" value="Menu">
-      <form class="" id="menu">
-        <div class="container">
-          <div class=row>
-            <div class="col">
-              <h2>Size</h2>
-              <ul>
-                <li>small -- 250</li>
-                <li>medium -- 500</li>
-                <li>large -- 1000</li>
-                <li>extra large --1250</li>
-              </ul>
-            </div>
-            <div class="col">
-              <h2>Crust</h2>
-              <ul>
-                <li>crispy</li>
-                <li>stuffed</li>
-                <li>glutten free</li>
-                <li>extra large --1250</li>
-              </ul>
-            </div>
-            <div class="col">
-              <h2>Toppings</h2>
-              <ul>
-                <li>vegan -- 220</li>
-                <li>pepparoni -- 150</li>
-                <li>mushroom -- 120</li>
-                <li>pineapple -- 80</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div>
-          <span class="" id="close">X</span>
-        </div>
-      </form>
-    </nav>
-    <div class="top">
-      <h2 class="page-header">Best Pizza in town.</h2>
-      <div class="more">
-        <h3 class="page-header" id="header_2">Try out some pizza</h3>
-        <input type="submit" value="ORDER" class="btn btn-success" id="order_btn">
-      </div>
-      <!-- make this form toggle of press of the order button -->
-      <!--  -->
-
+    <h2 class="page-header">Best Pizza in town.</h2>
+    <div class="more">
+      <h3 class="page-header" id="header_2">Try out some pizza</h3>
+      <input type="submit" value="ORDER" class="btn btn-success" id="order_btn">
     </div>
-    <form class="form-group" id="order_form">
+    <!-- make this form toggle of press of the order button -->
+    <!--  -->
+    <form class="" id="order_form">
       <div class="">
         <h3>Pizza size</h3>
-        <input type="text" id="size" class="form-control" placeholder="Enter pizza size">
-        <!-- <select class="custom-select" id="size">
-          <option value="">small -- 250</option>
-          <option value="">medium -- 500</option>
-          <option value="">large -- 1000</option>
-          <option value="">extra large --1250</option>
-        </select> -->
+        <select name="size" class="custom-select" id="size">
+          <option value="small">small -- 250</option>
+          <option value="medium">medium -- 500</option>
+          <option value="large">large -- 1000</option>
+          <option value="extra large">extra large --1250</option>
+        </select>
       </div>
       <div class="">
         <h3>Pizza crust</h3>
-
-        <input type="text" id="crust" class="form-control" placeholder="type of crust">
-        <!-- <select class="custom-select" id="crust">
-          <option value="">crispy</option>
-          <option value="">stuffed </option>
-          <option value="">gluten free </option>
-          <option value="">chicago-style deep dish </option>
-        </select> -->
+        <select name="crust" class="custom-select" id="crust">
+          <option value="crispy">crispy</option>
+          <option value="stuffed">stuffed </option>
+          <option value="glutten free">gluten free </option>
+          <option value="chicago deep dish">chicago-style deep dish </option>
+        </select>
       </div>
       <div class="">
         <h3>pizza toppings</h3>
-
-        <input type="text" id="toppings" class="form-control" placeholder="toppings">
-        <!-- <select class="custom-select" id="toppings">
-          <option value="">vegan -- 220</option>
-          <option value="">pepperoni -- 150</option>
-          <option value="">mushroom -- 120</option>
-          <option value="">pineapple -- 80</option>
-        </select> -->
+        <select name="toppings" class="custom-select" id="toppings">
+          <option value="vegan">vegan -- 220</option>
+          <option value="pepperoni">pepperoni -- 150</option>
+          <option value="mushroom">mushroom -- 120</option>
+          <option value="pineapple">pineapple -- 80</option>
+        </select>
       </div>
       <div class="">
         <label>Amount</label>
-        <input type="text" id="pizza_amnt" placeholder="">
+        <input type="text" id="pizza_amnt" name="amount" placeholder="">
       </div>
       <div class="" id="deliver_opt">
-        <input type="radio" id="deliver" name="radio" value="Deliver"> Deliver
-        <input type="radio" id="nt_deliver" name="radio" value="Dont deliver" checked> Dont deliver
-        <div class="locate_del">
-          <input type="text" class="form-control" id="estate" placeholder="location">
-          <div>
-            <input type="text" class="form-control" id="house_no" placeholder="house number">
-          </div>
+      <input type="radio" id="deliver" name="radio" value="Deliver"> Deliver
+      <input type="radio" id="nt_deliver" name="radio" value="Dont deliver" checked> Dont deliver
+      <div class="locate_del">
+        <input type="text" class="form-control" name="area" id="estate" placeholder="location">
+        <div>
+          <input type="text" class="form-control" name="street" id="street" placeholder="house number">
+        </div>
+        <div>
+          <input type="text" class="form-control" name="house_no" id="house_no" placeholder="house number">
         </div>
       </div>
-      <input type="submit" value="Order" id="place_order" class="btn btn-primary">
+      </div>
+      <input type="submit" value="Place order" id="place_order" class="btn btn-primary">
+      <!-- <input type="submit" value="Another order" id="add_order" class="btn btn-success"> -->
       <div>
-        <input type="submit" value="cancel" id="cancel_order" class="btn btn-danger">
+        <button  value="cancel" id="cancel_order" class="btn btn-danger">cancel</button>
       </div>
     </form>
     <!-- <form class="" id="delivery_form">
@@ -139,11 +92,10 @@
     <div id="show_order">
       <h2>Full order</h2>
       <ul id="full_order">
-
+        
       </ul>
-      <ul id="price">
-      </ul>
-      <ul id="location">
+      <ul id="delivery">
+        
       </ul>
     </div>
   </div>
@@ -174,5 +126,4 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script src="index.js"></script>
 </body>
-
 </html>
