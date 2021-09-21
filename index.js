@@ -19,14 +19,15 @@ $(document).ready(function () {
 })
 const showOrder = $('#show_order');
 const showLocation = $("#delivery");
-const price = {
-  small: 250,
-  medium: 500,
-  large: 1000,
-}
+
 $("form#order_form").submit(function (event) {
   event.preventDefault();
   const ord = new FormData(this);
+  const price = {
+    small: 250,
+    medium: 500,
+    large: 1000,
+  }
   const order = {
     size: ord.get("size"),
     crust: ord.get("crust"),
@@ -41,7 +42,7 @@ place:[],
     street: ord.get("street"),
     house: ord.get("house_no"),
     delivery: 200,
-    total: order[cost] + delivery,
+    total: (order.cost) + 200,
   };
   console.log(location)
   showOrder.append(`
