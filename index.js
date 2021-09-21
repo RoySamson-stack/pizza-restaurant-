@@ -45,6 +45,15 @@ place:[],
     total: (order.cost) + 200,
   };
   console.log(location)
+  showLocation.append(`
+    <ul id="delivery">
+      <li class="size"> ${location.area}</li>
+      <li class="toppings">${location.street}</li>
+      <li class="crust">${location.house} pizza.</li>
+      <li class="amount">your total is  ${location.total}</li> 
+    </ul>
+ 
+  `)
   showOrder.append(`
     <ul id="full_order">
       <li class="size"> Your order is a ${order.size}</li>
@@ -56,6 +65,7 @@ place:[],
     </ul>
   </div>
   `)
+  
  
   
 })

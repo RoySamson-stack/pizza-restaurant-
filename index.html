@@ -26,7 +26,7 @@
     <form class="" id="order_form">
       <div class="">
         <h3>Pizza size</h3>
-        <select name="size" class="custom-select" id="size">
+        <select name="size" class="custom-select" id="size" required>
           <option value="small">small -- 250</option>
           <option value="medium">medium -- 500</option>
           <option value="large">large -- 1000</option>
@@ -35,7 +35,7 @@
       </div>
       <div class="">
         <h3>Pizza crust</h3>
-        <select name="crust" class="custom-select" id="crust">
+        <select name="crust" class="custom-select" id="crust" required>
           <option value="crispy">crispy</option>
           <option value="stuffed">stuffed </option>
           <option value="glutten free">gluten free </option>
@@ -44,7 +44,7 @@
       </div>
       <div class="">
         <h3>pizza toppings</h3>
-        <select name="toppings" class="custom-select" id="toppings">
+        <select name="toppings" class="custom-select" id="toppings" required>
           <option value="vegan">vegan -- 220</option>
           <option value="pepperoni">pepperoni -- 150</option>
           <option value="mushroom">mushroom -- 120</option>
@@ -59,14 +59,13 @@
       <input type="radio" id="deliver" name="radio" value="Deliver"> Deliver
       <input type="radio" id="nt_deliver" name="radio" value="Dont deliver" checked> Dont deliver
       <div class="locate_del">
-        <input type="text" class="form-control" name="area" id="estate" placeholder="location">
+        <input type="text" class="form-control" name="area" id="estate" placeholder="location" required>
         <div>
-          <input type="text" class="form-control" name="street" id="street" placeholder="house number">
+          <input type="text" class="form-control" name="street" id="street" placeholder="estate" required>
         </div>
         <div>
-          <input type="text" class="form-control" name="house_no" id="house_no" placeholder="house number">
+          <input type="text" class="form-control" name="house_no" id="house_no" placeholder="house number" required>
         </div>
-        <input type="submit" value="deliver" name="deliver" class="btn btn-success">
       </div>
       </div>
       <input type="submit" value="Place order" id="place_order" class="btn btn-primary">
