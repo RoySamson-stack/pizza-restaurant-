@@ -173,13 +173,13 @@ $(document).ready(function () {
     console.log(price);
     $("#full_order").append(
       "<li><span class=''>" + newOrder.fullOrder() + "</span></li>");
-    $("#place_order").click(function () {
+    $("#place_order").last().click(function () {
       $("#show_order").show();
       $("#size").text(newOrder.size);
       $("#toppings").text(newOrder.toppings);
       $("#crust").text(newOrder.crust);
       $("#amount").text(newOrder.amount);
-
+      $("price").text(newOrder.price);
       $("#location").text(newLocation);
       newOrder.place.forEach(function (location) {
         $("#location").append("<li>" + location.estate + " " + location.house);
