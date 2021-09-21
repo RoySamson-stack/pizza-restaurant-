@@ -27,8 +27,6 @@ $("form#order_form").submit(function (event) {
     small: 250,
     medium: 500,
     large: 1000,
-  }
-  const round = {
     crispy: 220,
     stuffed: 150,
     glutten: 120,
@@ -39,7 +37,7 @@ $("form#order_form").submit(function (event) {
     crust: ord.get("crust"),
     top: ord.get("toppings"),
     amount: ord.get("amount"),
-    cost: parseInt(price[ord.get("size")]) * [ord.get("amount")] + parseInt(round[ord.get("crust")]),
+    cost: parseInt(price[ord.get("size")]) * [ord.get("amount")] + parseInt(price[ord.get("crust")]),
     place: [],
   }
   console.log(order);
@@ -68,10 +66,12 @@ $("form#order_form").submit(function (event) {
       <li class="crust">${order.top} pizza.</li>
       <li class="amount">amount is ${order.amount}</li>
       <li class="cost">cost is ${order.cost}</li>
+      <li class=""><h3>Your delivery is to</h3></li>
       <li class="place">${location.area}</li>
       <li class="toppings">${location.street}</li>
-      <li class="crust">${location.house} pizza.</li>
+      <li class="crust">${location.house}</li>
       <li class="amount">your total is  ${location.total}</li> 
+      <li>200 is for delivery</li>
     </ul>
   </div>
   `)
