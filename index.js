@@ -32,31 +32,29 @@ $("form#order_form").submit(function (event) {
     crust: ord.get("crust"),
     top: ord.get("toppings"),
     amount: ord.get("amount"),
-    cost: parseInt(price[ord.get("size")]) * (price[ord.get("amount")]),
-
+     cost: parseInt(price[ord.get("size")]) * ([ord.get("amount")]),
+place:[],
   }
+  console.log(order);
   const location = {
     area: ord.get("area"),
     street: ord.get("street"),
-    house: ord.get("house_no")
+    house: ord.get("house_no"),
+    delivery: 200,
   };
-  if ($("#deliver") == this.checked) {
-      showLocation.append(`
-      <ul id="delivery">
-      <li class="size"> to be delivered  to ${location.area}</li>
-      <li class="toppings">${location.street}</li>
-      <li class="crust">${location.house} pizza.</li>
-    </ul>
-      `)
-  }
+  console.log(location)
+      order.place.push(location)
   showOrder.append(`
     <ul id="full_order">
       <li class="size"> Your order is a ${order.size}</li>
       <li class="toppings">${order.crust}</li>
       <li class="crust">${order.top} pizza.</li>
       <li class="amount">amount is ${order.amount}</li>
-      <li class="cost">${order.cost}</li>
+      <li class="cost">cost is ${order.cost}</li>
+      <li class="place">${order.place}</li>
     </ul>
   </div>
   `)
+ 
+  
 })
