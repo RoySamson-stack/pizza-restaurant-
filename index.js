@@ -18,7 +18,7 @@ $(document).ready(function () {
 
 })
 const showOrder = $('#show_order');
-const showLocation = $("#delivery");
+// const showLocation = $("#delivery");
 
 $("form#order_form").submit(function (event) {
   event.preventDefault();
@@ -40,25 +40,14 @@ $("form#order_form").submit(function (event) {
     cost: parseInt(price[ord.get("size")]) * [ord.get("amount")] + parseInt(price[ord.get("crust")]),
     place: [],
   }
-  console.log(order);
-  const location = {
-    area: ord.get("area"),
-    street: ord.get("street"),
-    house: ord.get("house_no"),
-    delivery: 200,
-    total: (order.cost) + 200,
-  };
-  console.log(location)
-  order.place.push(location)
-  // showLocation.append(`
-  //   <ul id="delivery">
-  //     <li class="size"> ${location.area}</li>
-  //     <li class="toppings">${location.street}</li>
-  //     <li class="crust">${location.house} pizza.</li>
-  //     <li class="amount">your total is  ${location.total}</li> 
-  //   </ul>
- 
-  // `)
+  // const location = {
+  //   area: ord.get("area"),
+  //   street: ord.get("street"),
+  //   house: ord.get("house_no"),
+  //   delivery: 200,
+  //   total: (order.cost) + 200,
+  // };
+  
   showOrder.append(`
     <ul id="full_order">
       <li class="size"> Your order is a ${order.size}</li>
