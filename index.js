@@ -6,29 +6,11 @@ function Order(sizes, top, crust, amount, price, place) {
   this.price = price;
   this.place = [];
 }
-var price = function(){
-  if(size == "small"){
-    price = 250;
-  }else if(size == "medium"){
-    price = 500;
-  }else if(size == "large"){
-    price = 1000;
-  }else if(size == "extra large"){
-    price = 1250;
-  }
+const price = {
+  small: 250,
+  medium: 500,
+  large: 1000,
 }
-var topPrice = function(){
-  if(toppings == "vegan"){
-    topPrice = 220
-  }else if(toppings == pepparoni){
-    topPrice == 150;
-  }else if(toppings == mushroom){
-    topPrice == 120;
-  }else if(toppings == pineapple){
-    topPrice == 80
-  }
-}
-var totalPrice = topPrice + price;
 // function Sizes(size, price){
 //   this.size = size;
 //   this.price = price;
@@ -38,7 +20,7 @@ var totalPrice = topPrice + price;
 // this.price = price
 // }
 Order.prototype.fullOrder = function () {
-  return "Your order is " + this.sizes + " size pizza with  " + this.top + "  topping , " + this.crust + " crust and " + this.amount + " pizzas and your total is" + this.price ;
+  return "Your order is " + this.sizes + " size pizza with  " + this.top + "  topping , " + this.crust + " crust and " + this.amount + " pizzas and your total is" + this.price;
 }
 
 function Location(street, house, number) {
@@ -51,6 +33,14 @@ Location.prototype.fullAddress = function () {
   return "To be delivered to " + this.street + " " + this.house;
 }
 
+function Price(small, medium, large) {
+  this.small = 250;
+  this.medium = 500;
+  this.large = 1000;
+}
+Price.prototype.cost = function () {
+  return (parseInt[size] * parseInt(amount))
+}
 $(document).ready(function () {
   $("#order_btn").click(function () {
     $("#order_form").show();
@@ -128,7 +118,9 @@ $(document).ready(function () {
     var pizzaCrust = $('#crust').val();
     var pizzaTop = $('#toppings').val();
     var inputAmount = $('#pizza_amnt').val();
-    var price = " ";
+    const order = parseInt(price[pizzaSize]) * parseInt[inputAmount]
+
+
     // size.addEventListener(`change`, (e) => {
     //   const select = e.target;
     //   const value = select.value;
@@ -159,7 +151,7 @@ $(document).ready(function () {
     // }
 
     var newOrder = new Order(pizzaSize, pizzaCrust, pizzaTop, inputAmount);
-
+    var newPrice = new Price(this);
     $(".locate_del").each(function () {
       var locate = $(this).find('#estate').val();
       var house = $(this).find('#house_no').val();
@@ -169,17 +161,19 @@ $(document).ready(function () {
         house: house
       };
       newOrder.place.push(newLocation);
+
     })
+
     console.log(price);
     $("#full_order").append(
       "<li><span class=''>" + newOrder.fullOrder() + "</span></li>");
-    $("#place_order").last().click(function () {
+    $("#place_order").on("click",  function () {
       $("#show_order").show();
       $("#size").text(newOrder.size);
       $("#toppings").text(newOrder.toppings);
       $("#crust").text(newOrder.crust);
       $("#amount").text(newOrder.amount);
-      $("price").text(newOrder.price);
+      $("#price").text(order.price);
       $("#location").text(newLocation);
       newOrder.place.forEach(function (location) {
         $("#location").append("<li>" + location.estate + " " + location.house);
