@@ -3,9 +3,32 @@ function Order(sizes, top, crust, amount, price, place) {
   this.top = top;
   this.crust = crust;
   this.amount = amount;
-  this.price = [];
+  this.price = price;
   this.place = [];
 }
+var price = function(){
+  if(size == "small"){
+    price = 250;
+  }else if(size == "medium"){
+    price = 500;
+  }else if(size == "large"){
+    price = 1000;
+  }else if(size == "extra large"){
+    price = 1250;
+  }
+}
+var topPrice = function(){
+  if(toppings == "vegan"){
+    topPrice = 220
+  }else if(toppings == pepparoni){
+    topPrice == 150;
+  }else if(toppings == mushroom){
+    topPrice == 120;
+  }else if(toppings == pineapple){
+    topPrice == 80
+  }
+}
+var totalPrice = topPrice + price;
 // function Sizes(size, price){
 //   this.size = size;
 //   this.price = price;
@@ -15,7 +38,7 @@ function Order(sizes, top, crust, amount, price, place) {
 // this.price = price
 // }
 Order.prototype.fullOrder = function () {
-  return "Your order is " + this.sizes + " size pizza with  " + this.top + "  topping , " + this.crust + " crust and " + this.amount + " pizzas";
+  return "Your order is " + this.sizes + " size pizza with  " + this.top + "  topping , " + this.crust + " crust and " + this.amount + " pizzas and your total is" + this.price ;
 }
 
 function Location(street, house, number) {
@@ -125,15 +148,15 @@ $(document).ready(function () {
     //   console.log(desc);
     // });
 
-    if ((pizzaSize) == "small") {
-      price = 250;
-    } else if ((pizzaSize) == "medium") {
-      price = 500;
-    } else if ((pizzaSize) == "large") {
-      price = 1000;
-    } else if ((pizzaSize) == "extra large") {
-      price = 1250;
-    }
+    // if ((pizzaSize) == "small") {
+    //   price = 250;
+    // } else if ((pizzaSize) == "medium") {
+    //   price = 500;
+    // } else if ((pizzaSize) == "large") {
+    //   price = 1000;
+    // } else if ((pizzaSize) == "extra large") {
+    //   price = 1250;
+    // }
 
     var newOrder = new Order(pizzaSize, pizzaCrust, pizzaTop, inputAmount);
 
