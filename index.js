@@ -28,12 +28,18 @@ $("form#order_form").submit(function (event) {
     medium: 500,
     large: 1000,
   }
+  const round = {
+    crispy: 220,
+    stuffed: 150,
+    glutten: 120,
+    deep: 80,
+  }
   const order = {
     size: ord.get("size"),
     crust: ord.get("crust"),
     top: ord.get("toppings"),
     amount: ord.get("amount"),
-    cost: parseInt(price[ord.get("size")]) * [ord.get("amount")],
+    cost: parseInt(price[ord.get("size")]) * [ord.get("amount")] + parseInt(round[ord.get("crust")]),
     place: [],
   }
   console.log(order);
