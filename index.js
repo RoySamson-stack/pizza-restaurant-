@@ -20,9 +20,9 @@ $(document).ready(function () {
 const showOrder = $('#show_order');
 const showLocation = $("#delivery");
 const price = {
-  small: 500,
-  meduim: 700,
-  large: 1250,
+  small: 250,
+  medium: 500,
+  large: 1000,
 }
 $("form#order_form").submit(function (event) {
   event.preventDefault();
@@ -32,7 +32,7 @@ $("form#order_form").submit(function (event) {
     crust: ord.get("crust"),
     top: ord.get("toppings"),
     amount: ord.get("amount"),
-     cost: parseInt(price[ord.get("size")]) * ([ord.get("amount")]),
+     cost: parseInt(price[ord.get("size")]) * [ord.get("amount")],
 place:[],
   }
   console.log(order);
@@ -41,9 +41,9 @@ place:[],
     street: ord.get("street"),
     house: ord.get("house_no"),
     delivery: 200,
+    total: order[cost] + delivery,
   };
   console.log(location)
-      order.place.push(location)
   showOrder.append(`
     <ul id="full_order">
       <li class="size"> Your order is a ${order.size}</li>
