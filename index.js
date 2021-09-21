@@ -33,8 +33,8 @@ $("form#order_form").submit(function (event) {
     crust: ord.get("crust"),
     top: ord.get("toppings"),
     amount: ord.get("amount"),
-     cost: parseInt(price[ord.get("size")]) * [ord.get("amount")],
-place:[],
+    cost: parseInt(price[ord.get("size")]) * [ord.get("amount")],
+    place: [],
   }
   console.log(order);
   const location = {
@@ -45,15 +45,16 @@ place:[],
     total: (order.cost) + 200,
   };
   console.log(location)
-  showLocation.append(`
-    <ul id="delivery">
-      <li class="size"> ${location.area}</li>
-      <li class="toppings">${location.street}</li>
-      <li class="crust">${location.house} pizza.</li>
-      <li class="amount">your total is  ${location.total}</li> 
-    </ul>
+  order.place.push(location)
+  // showLocation.append(`
+  //   <ul id="delivery">
+  //     <li class="size"> ${location.area}</li>
+  //     <li class="toppings">${location.street}</li>
+  //     <li class="crust">${location.house} pizza.</li>
+  //     <li class="amount">your total is  ${location.total}</li> 
+  //   </ul>
  
-  `)
+  // `)
   showOrder.append(`
     <ul id="full_order">
       <li class="size"> Your order is a ${order.size}</li>
@@ -61,11 +62,14 @@ place:[],
       <li class="crust">${order.top} pizza.</li>
       <li class="amount">amount is ${order.amount}</li>
       <li class="cost">cost is ${order.cost}</li>
-      <li class="place">${order.place}</li>
+      <li class="place">${location.area}</li>
+      <li class="toppings">${location.street}</li>
+      <li class="crust">${location.house} pizza.</li>
+      <li class="amount">your total is  ${location.total}</li> 
     </ul>
   </div>
   `)
-  
- 
-  
+
+
+
 })
